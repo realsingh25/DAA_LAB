@@ -2,13 +2,10 @@ import time
 
 
 f = open("descending.txt","r")
-
 li = []
 for i in f:
     li.append(int(i))
 
-
-li = li[:10000]
 
 
 start = time.time()
@@ -24,7 +21,6 @@ for i in range(len(li)-1):
 
 
 end = time.time()
-
+print(end)
 print(end - start)
 
-f.close()
