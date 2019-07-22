@@ -1,30 +1,29 @@
-import time
+def createlist():
+    testlist = list()
+    file = open("D:\\COLLEGE\\III YEAR\\DAA_LAB\\TEST DATA/descending.txt","r")
+    count = 0
+    for i in file:
+        testlist.append(int(i))
+        count += 1
+
+        if count == 1000:
+            break
+    file.close()
+    return testlist
 
 
-f = open("descending.txt","r")
+def bubblesort(testlist):
+    for i in range(len(testlist)): 
+        swap = False
 
-li = []
-for i in f:
-    li.append(int(i))
+        for j in range(0, len(testlist)-i-1): 
+            if testlist[j] > testlist[j+1]: 
+                testlist[j], testlist[j+1] = testlist[j+1], testlist[j] 
+                swap = True
 
+        if swap is False: 
+            break
 
-li = li[:10000]
-
-
-start = time.time()
-
-i=0
-for i in range(len(li)-1):
-    j=0
-    for j in range(len(li)-1-i):
-        if li[j] > li[j+1]:
-            temp = li[j+1]
-            li[j+1] = li[j]
-            li[j] = temp
-
-
-end = time.time()
-
-print(end - start)
-
-f.close()
+if __name__ == '__main__':
+    bubblesort(createlist())
+    
