@@ -19,15 +19,12 @@ def insertionsort(testlist):
     for i in range(1, len(testlist)):
         element = testlist[i]
 
-        for j in range(0, i):
-            if element < testlist[j]:
-                flag = len(testlist)-j-1
-                while flag>=0:
-                    testlist[flag+1] = testlist[]
-                    flag-=1
-                testlist[j] = element
+        j = i-1
+        while j>=0 and element<testlist[j]:
+            testlist[j+1] = testlist[j]
+            j-=1
+        testlist[j+1] = element
 
-    print(testlist)
     print('Tested time: ', datetime.datetime.now() - start_time)
 
 if __name__ == '__main__':
