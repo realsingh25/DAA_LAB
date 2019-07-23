@@ -12,23 +12,16 @@ def createlist():
     return testlist
 
 
-def bubblesort(testlist):
+def selectionsort(testlist):
     import datetime
     start_time = datetime.datetime.now()
 
-    for i in range(len(testlist)): 
-        swap = False
-
-        for j in range(0, len(testlist)-i-1): 
-            if testlist[j] > testlist[j+1]: 
-                testlist[j], testlist[j+1] = testlist[j+1], testlist[j] 
-                swap = True
-
-        if swap is False: 
-            break
+    for i in range(len(testlist)):
+        for j in range(i+1, len(testlist)):
+            if testlist[i] > testlist[j]:
+                testlist[j], testlist[i] = testlist[i], testlist[j]
 
     print('Tested time: ', datetime.datetime.now() - start_time)
 
 if __name__ == '__main__':
-    bubblesort(createlist())
-    
+    selectionsort(createlist())
