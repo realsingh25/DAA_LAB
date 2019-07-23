@@ -6,13 +6,16 @@ def createlist():
         testlist.append(int(i))
         count += 1
 
-        if count == 1000:
+        if count == 5000:
             break
     file.close()
     return testlist
 
 
 def bubblesort(testlist):
+    import datetime
+    start_time = datetime.datetime.now()
+
     for i in range(len(testlist)): 
         swap = False
 
@@ -23,6 +26,8 @@ def bubblesort(testlist):
 
         if swap is False: 
             break
+
+    print('Tested time: ', datetime.datetime.now() - start_time)
 
 if __name__ == '__main__':
     bubblesort(createlist())
