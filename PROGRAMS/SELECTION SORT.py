@@ -1,6 +1,6 @@
 def createlist():
     testlist = list()
-    file = open("D:\\COLLEGE\\III YEAR\\DAA_LAB\\TEST DATA/descending.txt","r")
+    file = open("D:\\COLLEGE\\ACADEMIC\\III YEAR\\DAA_LAB\\TEST DATA\\descending.txt","r")
     count = 0
     for i in file:
         testlist.append(int(i))
