@@ -16,7 +16,7 @@ def binarysearch(testlist, low, high, element, count):
     print(testlist, low, high, element, count)
 
     if high >= low:
-        mid = (low + high)//2
+        mid = low + (high)//2
         if testlist[mid] == element:
             return count
         elif testlist[mid] > element:
