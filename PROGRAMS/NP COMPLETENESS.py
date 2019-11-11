@@ -12,10 +12,10 @@ def KS(Pro,i,W):
 
 def main():
     n=1
-    plt.xlabel('Input Size (N)')
-    plt.ylabel('Execution Time (milli second)')
+    plt.xlabel('No. of inputs (N)')
+    plt.ylabel('Time (in ms.)')
     values={}
-    while(n<20):
+    while(n<25):
         Pro=[[0],[0]]
         for i in range(1,n+1):
             Pro[0].append(random.randint(1,50))
@@ -27,7 +27,6 @@ def main():
         n+=1
 
     plt.plot(list(values.keys()), list(values.values()))
-    plt.savefig('KS.png')
     plt.show()
 
 
