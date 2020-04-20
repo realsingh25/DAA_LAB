@@ -1,2 +1,2 @@
 # DAA_LAB
-ALGORITHM TESTING
+Design and Analysis of Algorithms Lab Practice 
